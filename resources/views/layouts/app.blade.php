@@ -28,11 +28,11 @@
         <nav class="navbar top-navbar col-lg-12 col-12 p-0">
           <div class="container">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-              <a class="navbar-brand brand-logo" href="index.html">
+              <a class="navbar-brand brand-logo" href="{{ route('admin.dashboard') }}">
                 <img src="../assets/images/logo.svg" alt="logo" />
                 <span class="font-12 d-block font-weight-light">Responsive Dashboard </span>
               </a>
-              <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../assets/images/logo-mini.svg" alt="logo" /></a>
+              <a class="navbar-brand brand-logo-mini" href="{{ route('admin.dashboard') }}"><img src="../assets/images/logo-mini.svg" alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
               <ul class="navbar-nav mr-lg-2">
@@ -77,7 +77,7 @@
           <div class="container">
             <ul class="nav page-navigation">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{ route('admin.dashboard') }}">
                   <i class="mdi mdi-compass-outline menu-icon"></i>
                   <span class="menu-title">Dashboard</span>
                 </a>
@@ -85,51 +85,39 @@
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="mdi mdi-monitor-dashboard menu-icon"></i>
-                  <span class="menu-title">UI Elements</span>
-                  <i class="menu-arrow"></i>
+                  <span class="menu-title">Profile Sekolah</span>
+                  <i class="menu-title"></i>
                 </a>
-                <div class="submenu">
-                  <ul class="submenu-item">
-                    <li class="nav-item">
-                      <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdown</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
-                    </li>
-                  </ul>
-                </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="pages/forms/basic_elements.html">
                   <i class="mdi mdi-clipboard-text menu-icon"></i>
-                  <span class="menu-title">Forms</span>
+                  <span class="menu-title">Data Siswa</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="pages/icons/mdi.html">
                   <i class="mdi mdi-contacts menu-icon"></i>
-                  <span class="menu-title">Icons</span>
+                  <span class="menu-title">Data Siswa</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="pages/charts/chartjs.html">
                   <i class="mdi mdi-chart-bar menu-icon"></i>
-                  <span class="menu-title">Charts</span>
+                  <span class="menu-title">Berita</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="pages/tables/basic-table.html">
                   <i class="mdi mdi-table-large menu-icon"></i>
-                  <span class="menu-title">Tables</span>
+                  <span class="menu-title">Galeri</span>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="https://www.bootstrapdash.com/demo/plus-free/documentation/documentation.html" class="nav-link" target="_blank">
-                  <i class="mdi mdi-file-document-box menu-icon"></i>
-                  <span class="menu-title">Docs</span></a>
+               <li class="nav-item">
+                <a class="nav-link" href="pages/tables/basic-table.html">
+                  <i class="mdi mdi-table-large menu-icon"></i>
+                  <span class="menu-title">Ekstrakulikuler</span>
+                </a>
               </li>
               <li class="nav-item">
                 <div class="nav-link d-flex">
@@ -150,7 +138,7 @@
                         <i class="flag-icon flag-icon-ru mr-3"></i>Russian </a>
                     </div>
                   </div>
-                  <a class="text-white" href="index.html"><i class="mdi mdi-home-circle"></i></a>
+                  <a class="text-white" href="{{ route('admin.dashboard') }}"><i class="mdi mdi-home-circle"></i></a>
                 </div>
               </li>
             </ul>
@@ -158,6 +146,19 @@
         </nav>
       </div>
 
+      <!-- page-body-wrapper -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- main-panel -->
+        <div class="main-panel">
+          <!-- content-wrapper -->
+          <div class="content-wrapper">
+
+            @yield('content')
+
+          </div>
+          <!-- content-wrapper ends -->
+
+          {{--
           <!-- partial:partials/_footer.html -->
           <footer class="footer">
             <div class="container">
@@ -171,13 +172,15 @@
               </div>
             </div>
           </footer>
+          --}}
           <!-- partial -->
-        </div>
         <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
       </div>
-      <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
+
     <!-- plugins:js -->
     <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
